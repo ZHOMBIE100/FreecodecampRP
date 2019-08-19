@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A simple Survey Form</title>
+<style>
+
+html,
+body {
+  background-color: DarkSlateGray;
+  text-align: center;
+  min-width: 320px;
+}
+h1 {
+	color: White;
+}
+
+header {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px;
+}
+
+#the-form-model {
+  background-color: #008B8B;
+  margin: 0 auto;
+  border-radius: 4px;
+  width: 75%;
+  max-width: 900px;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.Piggy {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.imba {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.input-field {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+#userAge {
+  width: 40px;
+}
+
+.Punk,
+input[type="checkbox"] {
+  float: left;
+  margin-right: 5px;
+}
+
+#submit {
+  background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px;
+  border: 0px solid;
+}
+
+.dropdown {
+  height: 35px;
+  width: 140px;
+  padding: 5px;
+  margin: 10px;  
+  margin-top: 15px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+.radio, .checkbox {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 833px) {
+  .input-field {
+    width: 80%;
+  }
+  select {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .Piggy {
+    width: 100%;
+    text-align: left;
+  }
+  .imba {
+    width: 80%;
+    float: left;
+  }
+  .input-field {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<body translate="no">
+<h1 id="title">A Simple Survey Form</h1>
+<div id="the-form-model">
+<p id="description">
+Let us know how we can improve Mahonne as a Web Developer
+</p>
+<form id="survey-form" method="POST" action="#somewherenice.php">
+<div class="Fishy">
+<div class="Piggy">
+<label id="name-label" for="name"> Name: </label>
+</div>
+<div class="imba">
+<input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your full name" required>
+</div>
+</div>
+<div class="Fishy">
+<div class="Piggy">
+<label id="email-label" for="email"> Email: </label>
+</div>
+<div class="imba">
+<input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+</div>
+</div>
+<div class="Fishy">
+<div class="Piggy">
+<label id="number-label" for="age"> Age: </label>
+</div>
+<div class="imba">
+<input type="number" name="age" id="number" min="10" max="100" class="input-field" placeholder="Age">
+</div>
+</div>
+
+<div class="Fishy">
+<div class="Piggy">
+<label id="number-label" for="age"> Gender: </label>
+</div>
+<div class="imba">
+<ul>
+<p>M<input name="gender1" value="Male" type="checkbox" ></p><p>F<input name="gender2" value="Female" type="checkbox"></p>
+</ul>
+</div>
+</div>
+
+<div class="Fishy">
+<div class="Piggy">
+<label for="currentPos">Which option best describes your current work status?</label>
+</div>
+<div class="imba">
+<select id="dropdown" name="currentPos" class="dropdown">
+<option disabled value>Select an option</option>
+<option value="student">Student</option>
+<option value="job">Full Time Job</option>
+<option value="job">Part Time Job</option>
+<option value="learner">Part Time learner</option>
+<option value="learner">Full Time Learner</option>
+ <option value="preferNo">Prefer not to say</option>
+<option value="other">Other</option>
+</select>
+</div>
+</div>
+
+<div class="Fishy">
+<div class="Piggy">
+<label for="currentPos">Which option best describes your current relationship status?</label>
+</div>
+<div class="imba">
+<select id="dropdown" name="currentPos" class="dropdown">
+<option disabled value>Select an option</option>
+<option value="couple">Married</option>
+<option value="dating">In a relationship</option>
+<option value="loner">Single</option>
+<option value="gay">Gay</option>
+<option value="lesbian">Lesbian</option>
+ <option value="preferNo">Prefer not to say</option>
+<option value="other">Other</option>
+</select>
+</div>
+</div>
+
+<div class="Fishy">
+<div class="Piggy">
+<label for="currentPos">Have Mahonne Worked on your project Before?</label>
+</div>
+<div class="imba">
+<select id="dropdown" name="currentPos" class="dropdown">
+<option disabled value>Select an option</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+
+</select>
+</div>
+</div>
+
+<div class="Fishy">
+<div class="Piggy">
+<label for="currentPos">Would you like to sign Mahonne on a project?</label>
+</div>
+<div class="imba">
+<select id="dropdown" name="currentPos" class="dropdown">
+<option disabled selected value>Select an option</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+
+</select>
+</div>
+</div>
+
+<div class="Fishy">
+<div class="Piggy">
+<label for="userRating"> How likely would you recommend Mahonne to a friend?</label>
+</div>
+<div class="imba">
+<ul style="list-style: none;">
+<li class="radio"><label>Definitely<input name="radio-buttons" value="1" type="radio" class="Punk"></label></li>
+<li class="radio"><label>Maybe<input name="radio-buttons" value="2" type="radio" class="Punk"></label></li>
+<li class="radio"><label>Not sure<input name="radio-buttons" value="3" type="radio" class="Punk"></label></li>
+</ul>
+</div>
+</div>
+<div class="Fishy">
+<div class="Piggy">
+<label for="comments">Comments here</label>
+</div>
+<div class="imba">
+<textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+</div>
+</div>
+<button id="submit" type="submit">Submit</button>
+</form>
+</div>
+<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+</body>
+</html>
