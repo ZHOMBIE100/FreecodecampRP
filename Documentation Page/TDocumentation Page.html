@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Technical Documentation Page</title>
+<style>
+    html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+  </style>
+</head>
+<body>
+<nav id="navbar">
+<header>HTML Documentation</header>
+<ul>
+<li><a class="nav-link" href="#Introduction">Introduction</a></li>
+<li>
+<a class="nav-link" href="#What_you_should_already_know">What you should already know</a
+      >
+</li>
+<li>
+<a class="nav-link" href="#HTML_Attributes">HTML attributes</a>
+</li>
+<li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+<li><a class="nav-link" href="#HTML_Elements">HTML elements</a></li>
+<li>
+<a class="nav-link" href="#HTML_Comments">HTML comments</a>
+</li>
+<li><a class="nav-link" href="#HTML_colors">HTML colors</a></li>
+<li><a class="nav-link" href="#HTML_links">HTML links</a></li>
+<li><a class="nav-link" href="#HTML_images">HTML images</a></li>
+<li><a class="nav-link" href="#HTML_css">HTML css</a></li>
+<li>
+<a class="nav-link" href="#HTML_table">HTML table</a>
+</li>
+<li><a class="nav-link" href="#HTML_iframes">HTML iframes</a></li>
+<li>
+<a class="nav-link" href="#HTML_responsive">HTML responsive</a
+      >
+</li>
+<li><a class="nav-link" href="#Reference">Reference</a></li>
+</ul>
+</nav>
+<main id="main-doc">
+<section class="main-section" id="Introduction">
+<header>Introduction</header>
+<article>
+<p>
+HTML (HyperText Markup Language) is the most basic building block of the Web. 
+It defines the meaning and structure of web content. Other technologies besides 
+HTML are generally used to describe a 
+web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+</p>
+<p>
+"HyperText" refers to links that connect web pages to one another, 
+either within a single website or between websites. Links are a fundamental aspect of the Web. 
+By uploading content to the Internet and linking it to pages created by other people, 
+you become an active participant in the World Wide Web.
+</p>
+<ul>
+<li>
+HTML uses "markup" to annotate text, images, and other content for display in a Web browser. 
+HTML markup includes special "elements" such as <code> head, title, body, header, footer, article, section, 
+p, div, span, img, aside, audio, canvas, datalist, 
+details, embed, nav, output, progress, video </code> and many others.
+</li>
+<li>
+Tags in HTML are case insensitive. That is, 
+they can be written in uppercase, lowercase, or a mixture. 
+Example "title" tag can be written as "Title","TITLE" or in any other way.
+
+
+</li>
+</ul>
+</article>
+</section>
+<section class="main-section" id="What_you_should_already_know">
+<header>What you should already know</header>
+<article>
+<p>This guide assumes you have some knowledge of the internet:</p>
+<ul>
+<li>
+A general understanding of the Internet and the World Wide Web (WWW).
+</li>
+<li>Hyperlinks, Homepages, and Websites.</li>
+<li>
+Basic understanding of computers and peripheral devices.
+</li>
+</ul>
+</article>
+</section>
+<section class="main-section" id="HTML_Attributes">
+<header>HTML Attributes</header>
+<article>
+<p>
+Elements in HTML have attributes; these are additional 
+values that configure the elements or adjust their behavior 
+in various ways to meet the criteria the users want.
+</p>
+<p>
+accept	form, input	List of types the server accepts, typically a file type.
+accept-charset	form	List of supported charsets.
+accesskey	Global attribute	Defines a keyboard shortcut to activate or add focus to the element.
+action	form	The URI of a program that processes the information submitted via the form.
+align	applet, caption, col, colgroup, hr, iframe, img, table, tbody, td, tfoot , th, thead, tr	Specifies the horizontal alignment of the element.
+allow	iframe	Specifies a feature-policy for the iframe.
+alt	applet, area, img, input	Alternative text in case an image can't be displayed.
+async	script	Indicates that the script should be executed asynchronously.
+autocapitalize	Global attribute	Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
+autocomplete	form, input, textarea	Indicates whether controls in this form can by default have their values automatically completed by the browser.
+</p>
+<p>All HTML elements can have attributes </p>
+<p>Attributes provide additional information about an element</p>
+<p>Attributes are always specified in the start tag          </p>
+<p>Attributes usually come in name/value pairs like: name="value"</p>
+
+</article>
+</section>
+<section class="main-section" id="Hello_world">
+<header>Hello world</header>
+<article>
+To get started with writing Html basic "hello world", open a text-editor and write your
+first "Hello world" HTML code and save it as extension ".html". double click on it to see your result 
+in the browser:
+<code> <h1>Hello World</h1>
+
+This code was written with the "h1" tag.
+</code>
+</article>
+</section>
+<section class="main-section" id="HTML_Elements">
+<header>HTML Elements</header>
+<p>
+An HTML element usually consists of a start tag and an end tag, 
+with the content inserted in between.
+</p>
+</section>
+<section class="main-section" id="HTML_Comments">
+<header>HTML Comments</header>
+<article>
+You can add comments to your HTML source by using the following syntax:
+<p>
+<code> Inline, open tag "<" with an exclamation mark "!" and two dash "--"
+"comments here" and close with, two dash just after your comments "--" and a close tag ">"
+</code>
+</p>
+<p>Notice that there is an exclamation point (!) in the opening tag, but not in the closing tag.</p>
+</article>
+</section>
+<section class="main-section" id="HTML_colors">
+<header>HTML colors</header>
+<article>
+<p>
+HTML colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.
+</p>
+<p>
+<strong>Color Names:</strong> <br>
+In HTML, a color can be specified by using a color name:
+</p>
+<code>Green, Tomato, organge etc</code>
+<p>
+RGB, HEX, RGBA, HSL, HSLA 
+</p>
+<code>rgb(255, 99, 71), #ff6347, rgba(255, 99, 71, 0.5), hsl(9, 100%, 64%), hsla(9, 100%, 64%, 0.5)</code
+      >
+</article>
+</section>
+<section class="main-section" id="HTML_links">
+<header>HTML links</header>
+<article>
+<p>
+Links are found in nearly all web pages. 
+Links allow users to click their way from page to page.
+</p>
+<p>
+HTML links are hyperlinks.
+
+You can click on a link and jump to another document.
+
+When you move the mouse over a link, the mouse arrow will turn into a little hand.
+</p>
+<code><a href="#"> this is a link </a> </code>
+<p> links are made with the link "a" tag and a "where to url" "href="location""</p>
+</article>
+</section>
+<section class="main-section" id="HTML_images">
+<header>HTML images</header>
+<article>
+<p>
+Images can improve the design and the appearance of a web page.
+</p>
+<p>
+In HTML, images are defined with the "img" tag.
+</p>
+<p>
+The "img" tag is empty, it contains attributes only, and does not have a closing tag.
+</p>
+<p>
+The "src" attribute specifies the URL (web address) of the image:
+</p>
+<code> <img src="https://www.activision.com/content/dam/atvi/callofduty/blackops4/buy/Call-of-Duty_BlackOps4_box-art.jpg"></code>
+</article>
+</section>
+<section class="main-section" id="HTML_css">
+<header>HTML css</header>
+<article>
+<p>CSS stands for Cascading Style Sheets.</p>
+<ul>
+<li>
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media.
+</li>
+</ul>
+<ul>
+<li>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</li>
+<li>
+CSS can be added to HTML elements in 3 ways:
+</li>
+<li>Inline - by using the "style" attribute in HTML elements</li>
+<li>Internal - by using a "style" element in the "head" section</li>
+<li>External - by using an external CSS file</li>
+<li>
+The most common way to add CSS, is to keep the styles in separate CSS files. 
+However, the inline and internal styling are easier to use and demonstrate.
+</li>
+</ul>
+</li>
+</article>
+</section>
+<section class="main-section" id="HTML_table">
+<header>HTML table</header>
+<article>
+An HTML table is defined with the "table" tag.
+
+Each table row is defined with the "tr" tag. 
+A table header is defined with the "th" tag. By default, 
+table headings are bold and centered. 
+A table data/cell is defined with the "td" tag.
+<code>
+<table style="width:20%">
+  <tr>
+    <th>Games</th>
+    <th>Prices</th> 
+    <th>Stock</th>
+  </tr>
+  <tr>
+    <td>mahonne</td>
+    <td>$100</td>
+    <td>Instock</td>
+  </tr>
+</table>
+</code>
+Note: this is a table without a border.
+</article>
+</section>
+<section class="main-section" id="HTML_iframes">
+<header>HTML iframes</header>
+<article>
+<p>An iframe is used to display a web page within a web page.</p>
+<p> An iframe has "iframe" tag with a closing as well.
+</article>
+</section>
+<section class="main-section" id="HTML_responsive">
+<header>HTML responsive</header>
+<article>
+<p>Responsive Web Design is about using HTML and CSS to automatically resize, 
+hide, shrink, or enlarge, 
+a website, to make it look good on all devices (desktops, tablets, and phones):
+</article>
+</section>
+<section class="main-section" id="Reference">
+<header>Reference</header>
+<article>
+<ul>
+<li>
+All the documentation in this page is taken from
+<a href="https://www.w3schools.com/html/default.asp" target="_blank">W3SCHOOL</a> and <a href="https://devdocs.io/html/" target="_blank">DEVDOCS</a>
+</li>
+</ul>
+</article>
+</section>
+</main>
+<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+</body>
+</html>
